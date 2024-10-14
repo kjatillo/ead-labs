@@ -9,7 +9,7 @@ public class ModuleCAResults
     public int Credit { get; set; }
     public string? StudentName { get; set; }
 
-
+    // Collection
     private List<double> results = new List<double>();
 
     // Methods
