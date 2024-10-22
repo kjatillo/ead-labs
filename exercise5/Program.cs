@@ -22,8 +22,9 @@ internal class Program
         myRadioPlayer.Add(fm98);
 
         // Favourite a station
-        myRadioPlayer.Like(rte2fm.Name);
-        myRadioPlayer.Like(newstalk.Name);
+        myRadioPlayer.Like("RTE 2FM");
+        myRadioPlayer.Like("Newstalk");
+        myRadioPlayer.Unlike("rte 2fm");
 
         // Display all stations
         Console.WriteLine("-- All Stations --");

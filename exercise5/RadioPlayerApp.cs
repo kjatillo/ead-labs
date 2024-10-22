@@ -66,11 +66,17 @@ public class RadioPlayerApp
 
     public void Unlike(string stationName)
     {
-        var findStation = favouriteStations.Where(s => s.Name == stationName).FirstOrDefault();
+        var findStation = favouriteStations
+            .Where(s => s.Name?.ToUpper() == stationName.ToUpper())
+            .FirstOrDefault();
 
         if (findStation != null)
         {
             favouriteStations.Remove(findStation);
+        }
+        else
+        {
+            throw new ArgumentException("Error: Station not found in favourites list!");
         }
     }
 
