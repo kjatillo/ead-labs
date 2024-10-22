@@ -1,6 +1,4 @@
-﻿using System.Xml.Serialization;
-
-namespace exercise5;
+﻿namespace exercise5;
 
 public class RadioPlayerApp
 {
@@ -63,6 +61,16 @@ public class RadioPlayerApp
             {
                 throw new ArgumentException("Error: Station not found!");
             }
+        }
+    }
+
+    public void Unlike(string stationName)
+    {
+        var findStation = favouriteStations.Where(s => s.Name == stationName).FirstOrDefault();
+
+        if (findStation != null)
+        {
+            favouriteStations.Remove(findStation);
         }
     }
 
