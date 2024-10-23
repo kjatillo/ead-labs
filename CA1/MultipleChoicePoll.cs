@@ -22,7 +22,8 @@ public class MultipleChoicePoll
                     throw new ArgumentException("Title can only be up to 30 characters only.");
                 }
 
-                if (value.Any(c => !char.IsLetterOrDigit(c) && !char.IsWhiteSpace(c)) || value.Length > 30)
+                if (value.Any(c => !char.IsLetterOrDigit(c) && !char.IsWhiteSpace(c))
+                    || value.Length > 30)
                 {
                     throw new ArgumentException("Title can only contain letters, numbers, or spaces.");
                 }
@@ -86,7 +87,7 @@ public class MultipleChoicePoll
 
         foreach (Option option in options)
         {
-           option.VotePercentage = (double) option.NumberOfVotes / totalNumberOfVotes * 100;    
+            option.VotePercentage = (double)option.NumberOfVotes / totalNumberOfVotes * 100;
         }
     }
 }
