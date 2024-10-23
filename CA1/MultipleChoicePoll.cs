@@ -51,6 +51,11 @@ public class MultipleChoicePoll
 
     public void CastVote(int optionNumber, int numberOfVotes)
     {
+        if (DateTime.Now > DueDate)
+        {
+            throw new InvalidOperationException("Cannot cast vote after the due date.");
+        }
+
         GetOption(optionNumber).NumberOfVotes += numberOfVotes;
         UpdateVotePercentage();
     }

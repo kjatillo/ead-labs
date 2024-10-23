@@ -8,7 +8,8 @@ public class Program
         MultipleChoicePoll myPoll = new MultipleChoicePoll()
         { 
             Title = "Favourite Food by Country", 
-            DueDate = DateTime.Now.AddMinutes(5) 
+            DueDate = DateTime.Now.AddDays(5)
+            // DueDate = new DateTime(2024, 10, 22)  // Throws an error, cannot vote after due date
         };
 
         // Add options to the poll
