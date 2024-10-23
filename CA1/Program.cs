@@ -23,6 +23,7 @@ public class Program
         myPoll.CastVote(1, 123);
         myPoll.CastVote(2, 444);
         myPoll.CastVote(3, 324);
+        // myPoll.CastVote(4, 324);  // Throws an error, no option added at element position 4
 
         // Display output
         Console.WriteLine($"<--- {myPoll.Title} --->");

@@ -67,6 +67,11 @@ public class MultipleChoicePoll
 
     public Option GetOption(int optionNumber)
     {
+        if (optionNumber < 0 || optionNumber >= options.Count)
+        {
+            throw new ArgumentOutOfRangeException("Option number is range is out of bounds.");
+        }
+
         return options[optionNumber];
     }
 
