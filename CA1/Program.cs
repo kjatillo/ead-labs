@@ -26,7 +26,7 @@ public class Program
         // myPoll.CastVote(4, 324);  // Throws an error, no option added at element position 4
 
         // Display output
-        Console.WriteLine($"<--- {myPoll.Title} --->");
+        Console.WriteLine($"[ {myPoll.Title} ]");
         for (int i = 0; i < myPoll.OptionCount; ++i)
         {
             Console.WriteLine(myPoll.GetOption(i));

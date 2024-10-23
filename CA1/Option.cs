@@ -10,6 +10,6 @@ public class Option
     // Method
     public override string ToString()
     {
-        return $"Option: {TextOption} | Number of Votes: {NumberOfVotes} | Vote Percentage: {VotePercentage:F2}%";
+        return $"- Option: {TextOption,-10} | Number of Votes: {NumberOfVotes,-5} | Vote Percentage: {VotePercentage,6:F2}%";
     }
 }
