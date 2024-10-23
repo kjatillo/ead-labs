@@ -46,6 +46,11 @@ public class MultipleChoicePoll
     // Methods
     public void AddOption(Option newOption)
     {
+        if (options.Any(option => option.TextOption == newOption.TextOption))
+        {
+            throw new ArgumentException("An identical option already exists.");
+        }
+
         options.Add(newOption);
     }
 
@@ -76,7 +81,7 @@ public class MultipleChoicePoll
 
         foreach (Option option in options)
         {
-            option.VotePercentage = (double) option.NumberOfVotes / totalNumberOfVotes * 100;
+           option.VotePercentage = (double) option.NumberOfVotes / totalNumberOfVotes * 100;    
         }
     }
 }
