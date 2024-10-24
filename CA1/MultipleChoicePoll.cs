@@ -22,8 +22,7 @@ public class MultipleChoicePoll
                     throw new ArgumentException("Title can only be up to 30 characters only.");
                 }
 
-                if (value.Any(c => !char.IsLetterOrDigit(c) && !char.IsWhiteSpace(c))
-                    || value.Length > 30)
+                if (value.Any(c => !char.IsLetterOrDigit(c) && !char.IsWhiteSpace(c)))
                 {
                     throw new ArgumentException("Title can only contain letters, numbers, or spaces.");
                 }
@@ -36,6 +35,7 @@ public class MultipleChoicePoll
     }
 
     public DateTime DueDate { get; init; }
+
     public int OptionCount
     {
         get
